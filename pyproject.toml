@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authwatch"
+version = "1.0.0"
+description = "Detect SSH brute force, user enumeration and suspicious logins in auth logs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "LEETOV" }]
+keywords = ["ssh", "security", "brute-force", "log-analysis", "blue-team"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Security",
+    "Topic :: System :: Logging",
+    "Environment :: Console",
+]
+
+[project.scripts]
+authwatch = "authwatch.cli:main"
+
+[tool.setuptools]
+packages = ["authwatch"]
